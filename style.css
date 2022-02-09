@@ -1,0 +1,255 @@
+html {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1;
+}
+
+body {
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background-color: #08090A;
+}
+
+#universe {
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#galaxy {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#sun,
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    margin-top: -0.25em;
+    margin-left: -0.25em;
+    border-radius: 50%;
+}
+
+#sun {
+    background-color: #FB7209;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 60px rgba(255, 160, 60, 0.4);
+}
+
+.planet {
+    background-color: #202020;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 50%;
+    top: -0.1%;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation-name: orbit;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(-360deg);
+    }
+}
+
+
+/*Орбита*/
+
+#mercury.orbit {
+    width: 14em;
+    height: 14em;
+    margin-top: -7em;
+    margin-left: -7em;
+    animation-duration: 1.4466s;
+}
+
+#venus.orbit {
+    width: 8.5em;
+    height: 8.5em;
+    margin-top: -4.25em;
+    margin-left: -4.25em;
+    animation-duration: 3.6986s;
+}
+
+#earth.orbit {
+    width: 10em;
+    height: 10em;
+    margin-top: -5em;
+    margin-left: -5em;
+    animation-duration: 6s;
+}
+
+#mars.orbit {
+    width: 17em;
+    height: 17em;
+    margin-top: -8.5em;
+    margin-left: -8.5em;
+    animation-duration: 11.2932s;
+}
+
+#jupiter.orbit {
+    width: 2.4em;
+    height: 2.4em;
+    margin-top: -1.2em;
+    margin-left: -1.2em;
+    animation-duration: 72s;
+}
+
+#saturn.orbit {
+    width: 5em;
+    height: 5em;
+    margin-top: -2.5em;
+    margin-left: -2.5em;
+    animation-duration: 174s;
+}
+
+#uranus.orbit {
+    width: 15em;
+    height: 15em;
+    margin-top: -7.5em;
+    margin-left: -7.5em;
+    animation-duration: 504s;
+}
+
+#neptune.orbit {
+    width: 18.4em;
+    height: 18.4em;
+    margin-top: -9.2em;
+    margin-left: -9.2em;
+    animation-duration: 990s;
+}
+
+
+/*Размер*/
+
+#sun {
+    font-size: 24em;
+}
+
+#mercury {
+    font-size: 1em;
+}
+
+#venus {
+    font-size: 2em;
+}
+
+#earth {
+    font-size: 2em;
+}
+
+#mars {
+    font-size: 1.5em;
+}
+
+#jupiter {
+    font-size: 16em;
+}
+
+#saturn {
+    font-size: 11em;
+}
+
+#uranus {
+    font-size: 5em;
+}
+
+#neptune {
+    font-size: 5em;
+}
+
+
+/*Тень*/
+
+#mercury .planet {
+    animation-name: shadow-planet;
+    animation-duration: 1.4466s;
+}
+
+#venus .planet {
+    animation-name: shadow-planet;
+    animation-duration: 3.6986s;
+}
+
+#earth .planet {
+    animation-name: shadow-planet;
+    animation-duration: 6s;
+}
+
+#mars .planet {
+    animation-name: shadow-planet;
+    animation-duration: 11.2932s;
+}
+
+#jupiter .planet {
+    animation-name: shadow-planet;
+    animation-duration: 72s;
+}
+
+#saturn .planet {
+    animation-name: shadow-planet;
+    animation-duration: 174s;
+}
+
+#uranus .planet {
+    animation-name: shadow-planet;
+    animation-duration: 504s;
+}
+
+#neptune .planet {
+    animation-name: shadow-planet;
+    animation-duration: 990s;
+}
+
+@keyframes shadow-planet {
+    0% {
+        box-shadow: inset 0 0 20px #00000080;
+    }
+    25% {
+        box-shadow: inset 16px 0 8px #00000080;
+    }
+    50% {
+        box-shadow: inset 40px -20px 16px #00000080;
+    }
+    50.01% {
+        box-shadow: inset -40px -20px 16px #00000080;
+    }
+    75% {
+        box-shadow: inset -16px 0 8px #00000080;
+    }
+    100% {
+        box-shadow: inset 0 0 20px #00000080;
+    }
+}
